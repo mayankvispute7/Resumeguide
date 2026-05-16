@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATS Friendly Resume Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace'],
+                    },
+                    colors: {
+                        primary: '#4f46e5', // Indigo 600
+                        primaryHover: '#4338ca', // Indigo 700
+                        surface: '#f8fafc', // Slate 50
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for the code block */
+        .custom-scrollbar::-webkit-scrollbar {
+            height: 8px;
+            width: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #1e293b; 
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #475569; 
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #64748b; 
+        }
+        
+        /* Smooth fade in animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="bg-surface font-sans text-slate-800 antialiased selection:bg-indigo-100 selection:text-indigo-900">
+
+    <!-- Hero Header -->
+    <header class="bg-white border-b border-slate-200 pt-16 pb-24 px-4 sm:px-6 relative overflow-hidden">
+        <!-- Background Decoration -->
+        <div class="absolute inset-0 z-0 opacity-30 pointer-events-none">
+            <div class="absolute -top-24 -right-24 w-96 h-96 bg-indigo-50 rounded-full blur-3xl"></div>
+            <div class="absolute top-12 -left-24 w-72 h-72 bg-blue-50 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="max-w-3xl mx-auto text-center relative z-10 animate-fade-in">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 text-indigo-600 text-sm font-semibold mb-6 border border-indigo-100">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>Student & Beginner Friendly</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-4 leading-tight">
+                ATS Friendly Resume Guide
+            </h1>
+            <p class="text-lg md:text-xl text-slate-600 font-medium max-w-2xl mx-auto">
+                Create a Professional ATS-Friendly Resume Using Overleaf + ChatGPT
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12 relative z-20 pb-24">
+        
+        <!-- The cohesive "Document" container -->
+        <div class="bg-white rounded-2xl shadow-xl shadow-slate-200/50 border border-slate-100 p-6 sm:p-10 md:p-14 animate-fade-in" style="animation-delay: 0.1s;">
+            
+            <div class="relative">
+                <!-- Vertical Timeline Line -->
+                <div class="absolute left-6 md:left-8 top-8 bottom-8 w-0.5 bg-slate-100 hidden sm:block"></div>
+
+                <div class="space-y-12 md:space-y-16">
+                    
+                    <!-- STEP 1 -->
+                    <div class="relative sm:pl-20 group">
+                        <!-- Number Indicator -->
+                        <div class="hidden sm:flex absolute left-0 top-0 w-12 h-12 md:w-16 md:h-16 bg-white border-4 border-slate-50 text-slate-400 rounded-full items-center justify-center font-bold text-xl md:text-2xl z-10 transition-colors duration-300 group-hover:border-indigo-50 group-hover:text-primary">
+                            1
+                        </div>
+                        <div class="sm:hidden text-primary font-bold text-lg mb-1">Step 1</div>
+                        
+                        <div>
+                            <h2 class="text-2xl font-bold text-slate-800 mb-2">Open Overleaf</h2>
+                            <p class="text-slate-600 mb-4 text-lg">Open the official Overleaf website to get started.</p>
+                            <a href="https://www.overleaf.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-5 py-2.5 bg-primary text-white font-medium rounded-lg hover:bg-primaryHover transition-all shadow-sm hover:shadow focus:ring-4 focus:ring-indigo-100 gap-2">
+                                <span>Go to Overleaf</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- STEP 2 -->
+                    <div class="relative sm:pl-20 group">
+                        <div class="hidden sm:flex absolute left-0 top-0 w-12 h-12 md:w-16 md:h-16 bg-white border-4 border-slate-50 text-slate-400 rounded-full items-center justify-center font-bold text-xl md:text-2xl z-10 transition-colors duration-300 group-hover:border-indigo-50 group-hover:text-primary">
+                            2
+                        </div>
+                        <div class="sm:hidden text-primary font-bold text-lg mb-1">Step 2</div>
+                        
+                        <div>
+                            <h2 class="text-2xl font-bold text-slate-800 mb-2">Create Account</h2>
+                            <p class="text-slate-600 text-lg">Sign up using Google, GitHub, or Email and login to your account.</p>
+                        </div>
+                    </div>
+
+                    <!-- STEP 3 -->
+                    <div class="relative sm:pl-20 group">
+                        <div class="hidden sm:flex absolute left-0 top-0 w-12 h-12 md:w-16 md:h-16 bg-white border-4 border-slate-50 text-slate-400 rounded-full items-center justify-center font-bold text-xl md:text-2xl z-10 transition-colors duration-300 group-hover:border-indigo-50 group-hover:text-primary">
+                            3
+                        </div>
+                        <div class="sm:hidden text-primary font-bold text-lg mb-1">Step 3</div>
+                        
+                        <div>
+                            <h2 class="text-2xl font-bold text-slate-800 mb-2">Open Resume Templates</h2>
+                            <p class="text-slate-600 mb-4 text-lg">Open the Overleaf Resume Templates page to find professional layouts.</p>
+                            <a href="https://www.overleaf.com/latex/templates/tagged/cv" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-5 py-2.5 bg-white text-slate-700 font-medium rounded-lg border border-slate-300 hover:bg-slate-50 hover:border-slate-400 transition-all shadow-sm gap-2">
+                                <span>Browse Templates</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-sm text-slate-400"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- STEP 4 -->
+                    <div class="relative sm:pl-20 group">
+                        <div class="hidden sm:flex absolute left-0 top-0 w-12 h-12 md:w-16 md:h-16 bg-white border-4 border-slate-50 text-slate-400 rounded-full items-center justify-center font-bold text-xl md:text-2xl z-10 transition-colors duration-300 group-hover:border-indigo-50 group-hover:text-primary">
+                            4
+                        </div>
+                        <div class="sm:hidden text-primary font-bold text-lg mb-1">Step 4</div>
+                        
+                        <div>
+                            <h2 class="text-2xl font-bold text-slate-800 mb-2">Search Harshibar Resume</h2>
+                            <p class="text-slate-600 mb-3 text-lg">In the search bar type:</p>
+                            <div class="bg-slate-50 text-slate-900 px-5 py-3 rounded-lg font-mono text-lg inline-block border border-slate-200 select-all shadow-inner">
+                                Harshibar Resume
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- STEP 5 -->
+                    <div class="relative sm:pl-20 group">
+                        <div class="hidden sm:flex absolute left-0 top-0 w-12 h-12 md:w-16 md:h-16 bg-white border-4 border-slate-50 text-slate-400 rounded-full items-center justify-center font-bold text-xl md:text-2xl z-10 transition-colors duration-300 group-hover:border-indigo-50 group-hover:text-primary">
+                            5
+                        </div>
+                        <div class="sm:hidden text-primary font-bold text-lg mb-1">Step 5</div>
+                        
+                        <div>
+                            <h2 class="text-2xl font-bold text-slate-800 mb-2">Open as Template</h2>
+                            <p class="text-slate-600 text-lg">Click <strong class="font-semibold text-slate-900">Open as Template</strong> so the Overleaf code editor opens.</p>
+                        </div>
+                    </div>
+
+                    <!-- STEP 6 -->
+                    <div class="relative sm:pl-20 group">
+                        <div class="hidden sm:flex absolute left-0 top-0 w-12 h-12 md:w-16 md:h-16 bg-white border-4 border-slate-50 text-slate-400 rounded-full items-center justify-center font-bold text-xl md:text-2xl z-10 transition-colors duration-300 group-hover:border-indigo-50 group-hover:text-primary">
+                            6
+                        </div>
+                        <div class="sm:hidden text-primary font-bold text-lg mb-1">Step 6</div>
+                        
+                        <div>
+                            <h2 class="text-2xl font-bold text-slate-800 mb-2">Copy Full LaTeX Code</h2>
+                            <p class="text-slate-600 text-lg">Click inside the code editor on the left side, then press <kbd class="px-2 py-1 bg-slate-100 border border-slate-200 rounded text-sm font-mono text-slate-800 mx-1">CTRL + A</kbd> and then <kbd class="px-2 py-1 bg-slate-100 border border-slate-200 rounded text-sm font-mono text-slate-800 mx-1">CTRL + C</kbd> to copy the full LaTeX code.</p>
+                        </div>
+                    </div>
+
+                    <!-- STEP 7 -->
+                    <div class="relative sm:pl-20 group">
+                        <div class="hidden sm:flex absolute left-0 top-0 w-12 h-12 md:w-16 md:h-16 bg-white border-4 border-slate-50 text-slate-400 rounded-full items-center justify-center font-bold text-xl md:text-2xl z-10 transition-colors duration-300 group-hover:border-indigo-50 group-hover:text-primary">
+                            7
+                        </div>
+                        <div class="sm:hidden text-primary font-bold text-lg mb-1">Step 7</div>
+                        
+                        <div>
+                            <h2 class="text-2xl font-bold text-slate-800 mb-2">Open ChatGPT</h2>
+                            <p class="text-slate-600 mb-4 text-lg">Open ChatGPT or any AI tool.</p>
+                            <a href="https://chatgpt.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-5 py-2.5 bg-[#10a37f] text-white font-medium rounded-lg hover:bg-[#0e906f] transition-all shadow-sm hover:shadow focus:ring-4 focus:ring-emerald-100 gap-2">
+                                <i class="fa-solid fa-robot"></i>
+                                <span>Go to ChatGPT</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- STEP 8 -->
+                    <div class="relative sm:pl-20 group">
+                        <div class="hidden sm:flex absolute left-0 top-0 w-12 h-12 md:w-16 md:h-16 bg-white border-4 border-slate-50 text-slate-400 rounded-full items-center justify-center font-bold text-xl md:text-2xl z-10 transition-colors duration-300 group-hover:border-indigo-50 group-hover:text-primary">
+                            8
+                        </div>
+                        <div class="sm:hidden text-primary font-bold text-lg mb-1">Step 8</div>
+                        
+                        <div>
+                            <h2 class="text-2xl font-bold text-slate-800 mb-2">Upload Your Old Resume PDF</h2>
+                            <p class="text-slate-600 text-lg">Upload your old resume PDF so AI can extract your information.</p>
+                        </div>
+                    </div>
+
+                    <!-- STEP 9 -->
+                    <div class="relative sm:pl-20 group">
+                        <div class="hidden sm:flex absolute left-0 top-0 w-12 h-12 md:w-16 md:h-16 bg-white border-4 border-slate-50 text-slate-400 rounded-full items-center justify-center font-bold text-xl md:text-2xl z-10 transition-colors duration-300 group-hover:border-indigo-50 group-hover:text-primary">
+                            9
+                        </div>
+                        <div class="sm:hidden text-primary font-bold text-lg mb-1">Step 9</div>
+                        
+                        <div>
+                            <h2 class="text-2xl font-bold text-slate-800 mb-2">Copy This Prompt</h2>
+                            <p class="text-slate-600 mb-6 text-lg">Copy the exact instructions below to tell the AI how to process your template.</p>
+                        </div>
+                        
+                        <!-- Beautiful Code Box -->
+                        <div class="relative bg-slate-900 rounded-xl shadow-lg overflow-hidden border border-slate-800">
+                            <!-- Code Header with Button -->
+                            <div class="flex items-center justify-between px-4 py-3 bg-slate-800/80 border-b border-slate-700">
+                                <div class="flex space-x-2">
+                                    <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
+                                    <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+                                    <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <span id="copyFeedback" class="text-emerald-400 text-sm font-medium tracking-wide opacity-0 transition-opacity duration-300 flex items-center">
+                                        <i class="fa-solid fa-check mr-1.5"></i> Copied
+                                    </span>
+                                    <button onclick="copyPromptToClipboard()" class="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-slate-200 px-3 py-1.5 rounded-md transition-colors text-sm font-medium focus:outline-none focus:ring-2 focus:ring-indigo-400">
+                                        <i class="fa-regular fa-copy"></i>
+                                        <span>COPY PROMPT</span>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- Hidden Textarea for exact string copy -->
+                            <textarea id="promptTextarea" class="sr-only" aria-hidden="true" tabindex="-1">You are a LaTeX Overleaf resume editor.
+
+I will provide:
+1. A LaTeX resume template code
+2. My old resume PDF
+
+IMPORTANT:
+- The LaTeX template already works properly.
+- Do NOT change the design.
+- Do NOT change formatting.
+- Do NOT change spacing.
+- Do NOT change packages.
+- Do NOT add new sections.
+- Do NOT remove anything from the template structure.
+- Do NOT modify LaTeX commands unnecessarily.
+- Do NOT rewrite the entire code.
+- Do NOT generate a new template.
+
+YOUR ONLY JOB:
+- Extract my information from the uploaded PDF resume.
+- Replace ONLY the demo/sample person's information in the LaTeX template with my information.
+- Keep everything else EXACTLY SAME.
+
+IMPORTANT:
+- Keep the same LaTeX structure and syntax.
+- Keep all formatting exactly same.
+- Ensure the code compiles in Overleaf without errors.
+
+OUTPUT RULES:
+- Return ONLY the final complete LaTeX code.
+- Start directly from:
+\documentclass
+- End with:
+\end{document}</textarea>
+
+                            <div class="p-5 md:p-6 overflow-x-auto custom-scrollbar">
+                                <pre class="text-slate-300 font-mono text-[14px] leading-relaxed"><code id="promptDisplay">You are a LaTeX Overleaf resume editor.
+
+I will provide:
+1. A LaTeX resume template code
+2. My old resume PDF
+
+<span class="text-blue-400 font-semibold">IMPORTANT:</span>
+- The LaTeX template already works properly.
+- Do NOT change the design.
+- Do NOT change formatting.
+- Do NOT change spacing.
+- Do NOT change packages.
+- Do NOT add new sections.
+- Do NOT remove anything from the template structure.
+- Do NOT modify LaTeX commands unnecessarily.
+- Do NOT rewrite the entire code.
+- Do NOT generate a new template.
+
+<span class="text-amber-400 font-semibold">YOUR ONLY JOB:</span>
+- Extract my information from the uploaded PDF resume.
+- Replace ONLY the demo/sample person's information in the LaTeX template with my information.
+- Keep everything else EXACTLY SAME.
+
+<span class="text-blue-400 font-semibold">IMPORTANT:</span>
+- Keep the same LaTeX structure and syntax.
+- Keep all formatting exactly same.
+- Ensure the code compiles in Overleaf without errors.
+
+<span class="text-emerald-400 font-semibold">OUTPUT RULES:</span>
+- Return ONLY the final complete LaTeX code.
+- Start directly from:
+<span class="text-pink-400">\documentclass</span>
+- End with:
+<span class="text-pink-400">\end{document}</span></code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- STEP 10 -->
+                    <div class="relative sm:pl-20 group">
+                        <div class="hidden sm:flex absolute left-0 top-0 w-12 h-12 md:w-16 md:h-16 bg-white border-4 border-slate-50 text-slate-400 rounded-full items-center justify-center font-bold text-xl md:text-2xl z-10 transition-colors duration-300 group-hover:border-indigo-50 group-hover:text-primary">
+                            10
+                        </div>
+                        <div class="sm:hidden text-primary font-bold text-lg mb-1">Step 10</div>
+                        
+                        <div>
+                            <h2 class="text-2xl font-bold text-slate-800 mb-2">Paste the Prompt</h2>
+                            <p class="text-slate-600 text-lg">Paste the copied prompt into ChatGPT.</p>
+                        </div>
+                    </div>
+
+                    <!-- STEP 11 -->
+                    <div class="relative sm:pl-20 group">
+                        <div class="hidden sm:flex absolute left-0 top-0 w-12 h-12 md:w-16 md:h-16 bg-white border-4 border-slate-50 text-slate-400 rounded-full items-center justify-center font-bold text-xl md:text-2xl z-10 transition-colors duration-300 group-hover:border-indigo-50 group-hover:text-primary">
+                            11
+                        </div>
+                        <div class="sm:hidden text-primary font-bold text-lg mb-1">Step 11</div>
+                        
+                        <div>
+                            <h2 class="text-2xl font-bold text-slate-800 mb-2">Paste the Overleaf Code</h2>
+                            <p class="text-slate-600 text-lg">After the prompt, paste the full copied LaTeX code from Overleaf.</p>
+                        </div>
+                    </div>
+
+                    <!-- STEP 12 -->
+                    <div class="relative sm:pl-20 group">
+                        <div class="hidden sm:flex absolute left-0 top-0 w-12 h-12 md:w-16 md:h-16 bg-white border-4 border-slate-50 text-slate-400 rounded-full items-center justify-center font-bold text-xl md:text-2xl z-10 transition-colors duration-300 group-hover:border-indigo-50 group-hover:text-primary">
+                            12
+                        </div>
+                        <div class="sm:hidden text-primary font-bold text-lg mb-1">Step 12</div>
+                        
+                        <div>
+                            <h2 class="text-2xl font-bold text-slate-800 mb-2">Generate Resume</h2>
+                            <p class="text-slate-600 text-lg">AI will generate your ATS-friendly personalized LaTeX resume code.</p>
+                        </div>
+                    </div>
+
+                    <!-- STEP 13 -->
+                    <div class="relative sm:pl-20 group">
+                        <div class="hidden sm:flex absolute left-0 top-0 w-12 h-12 md:w-16 md:h-16 bg-white border-4 border-slate-50 text-slate-400 rounded-full items-center justify-center font-bold text-xl md:text-2xl z-10 transition-colors duration-300 group-hover:border-indigo-50 group-hover:text-primary">
+                            13
+                        </div>
+                        <div class="sm:hidden text-primary font-bold text-lg mb-1">Step 13</div>
+                        
+                        <div>
+                            <h2 class="text-2xl font-bold text-slate-800 mb-2">Copy AI Generated Code</h2>
+                            <p class="text-slate-600 text-lg">Copy the complete generated code from ChatGPT.</p>
+                        </div>
+                    </div>
+
+                    <!-- STEP 14 -->
+                    <div class="relative sm:pl-20 group">
+                        <div class="hidden sm:flex absolute left-0 top-0 w-12 h-12 md:w-16 md:h-16 bg-white border-4 border-slate-50 text-slate-400 rounded-full items-center justify-center font-bold text-xl md:text-2xl z-10 transition-colors duration-300 group-hover:border-indigo-50 group-hover:text-primary">
+                            14
+                        </div>
+                        <div class="sm:hidden text-primary font-bold text-lg mb-1">Step 14</div>
+                        
+                        <div>
+                            <h2 class="text-2xl font-bold text-slate-800 mb-2">Paste Back Into Overleaf</h2>
+                            <p class="text-slate-600 text-lg">Remove the old code and paste the new AI generated code.</p>
+                        </div>
+                    </div>
+
+                    <!-- STEP 15 -->
+                    <div class="relative sm:pl-20 group">
+                        <div class="hidden sm:flex absolute left-0 top-0 w-12 h-12 md:w-16 md:h-16 bg-white border-4 border-slate-50 text-slate-400 rounded-full items-center justify-center font-bold text-xl md:text-2xl z-10 transition-colors duration-300 group-hover:border-indigo-50 group-hover:text-primary">
+                            15
+                        </div>
+                        <div class="sm:hidden text-primary font-bold text-lg mb-1">Step 15</div>
+                        
+                        <div>
+                            <h2 class="text-2xl font-bold text-slate-800 mb-2">Click Recompile</h2>
+                            <p class="text-slate-600 text-lg">Click the Recompile button in Overleaf.</p>
+                        </div>
+                    </div>
+
+                    <!-- STEP 16 (Final Step) -->
+                    <div class="relative sm:pl-20 group">
+                        <!-- Special Final Indicator -->
+                        <div class="hidden sm:flex absolute left-0 top-0 w-12 h-12 md:w-16 md:h-16 bg-primary text-white border-4 border-indigo-100 rounded-full items-center justify-center shadow-md z-10">
+                            <i class="fa-solid fa-check text-xl"></i>
+                        </div>
+                        <div class="sm:hidden text-primary font-bold text-lg mb-1 flex items-center gap-2">
+                            Step 16 <i class="fa-solid fa-check text-sm bg-primary text-white p-1 rounded-full"></i>
+                        </div>
+                        
+                        <div class="bg-indigo-50/50 p-6 rounded-xl border border-indigo-100">
+                            <h2 class="text-2xl font-bold text-slate-900 mb-2 flex items-center gap-3">
+                                Download Resume PDF
+                                <span class="text-2xl">🎉</span>
+                            </h2>
+                            <p class="text-slate-700 text-lg font-medium">Your professional ATS-friendly resume is now ready to download.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+    </main>
+
+    <footer class="py-8 text-center text-slate-500 text-sm border-t border-slate-200">
+        <p>Built for students and software engineering aspirants.</p>
+    </footer>
+
+    <script>
+        function copyPromptToClipboard() {
+            // Get the textarea containing the raw text
+            const textarea = document.getElementById('promptTextarea');
+            const feedbackBox = document.getElementById('copyFeedback');
+            
+            // Fallback method using document.execCommand
+            try {
+                // Make textarea temporarily visible but out of viewport
+                textarea.style.position = 'absolute';
+                textarea.style.left = '-9999px';
+                textarea.classList.remove('sr-only');
+                
+                // Select and copy
+                textarea.select();
+                textarea.setSelectionRange(0, 99999); // For mobile devices
+                
+                const successful = document.execCommand('copy');
+                
+                if (successful) {
+                    // Show success feedback
+                    feedbackBox.classList.remove('opacity-0');
+                    feedbackBox.classList.add('opacity-100');
+                    
+                    // Hide feedback after 2.5 seconds
+                    setTimeout(() => {
+                        feedbackBox.classList.remove('opacity-100');
+                        feedbackBox.classList.add('opacity-0');
+                    }, 2500);
+                } else {
+                    console.error('Fallback: Copy command was unsuccessful');
+                }
+            } catch (err) {
+                console.error('Fallback: Oops, unable to copy', err);
+            } finally {
+                // Hide textarea again
+                textarea.classList.add('sr-only');
+                textarea.style.position = '';
+                textarea.style.left = '';
+            }
+        }
+    </script>
+</body>
+</html>
